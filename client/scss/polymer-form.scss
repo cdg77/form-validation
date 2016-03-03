@@ -1,0 +1,148 @@
+// .flex-container {
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: nowrap;
+//     justify-content: flex-start;
+//     align-content: flex-start;
+//     align-items: stretch;
+//     }
+//
+// .flex-item:nth-child(1) {
+//     order: 0;
+//     flex: 1 0 auto;
+//     align-self: center;
+//     }
+//
+// .flex-item:nth-child(2) {
+//     order: 1;
+//     flex: 3 0 auto;
+//     align-self: center;
+//     }
+//
+// .form-contents {
+//     background-color: rgba(212, 206, 106, 0.2);
+//     // background-color: rgba(183, 211, 11, 0.2);
+// }
+body
+    .polymer-body {
+        background-color: #2C3E50;
+        paper-fab {
+            display: inline-flex;
+
+                  }
+        .container-polymer {
+            position: relative;
+            padding-top: 0 0 0 0;
+            width: 400px;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: #F8F8FF;
+            // opacity: 0.7;
+            color: #BB9300;
+            font-family: 'Cinzel';
+            font-weight: 400;
+            font-size: 100%;
+            text-shadow: 1px 1px 2px black;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+            align-items: stretch;
+
+            #polymerMainForm {
+                order: 0;
+                flex: 1 0 auto;
+                align-self: center;
+                background-color: #2C3E50;
+                box-shadow: 0 2px 2px 0 rgba(9, 172, 251, 0.4),
+                            0 1px 5px 0 rgba(9, 172, 251, 0.4),
+                            0 3px 1px -2px rgba(9, 172, 251, 0.4);
+                .vertical-section {
+                    background-color: yellow;
+                    box-shadow: 0 2px 2px 0 rgba(117, 175, 150, 0.4),
+                                0 1px 5px 0 rgba(117, 175, 150, 0.4),
+                                0 3px 1px -2px rgba(117, 175, 150, 0.4);
+                }
+                .polymer-fieldset {
+                    background-color: #ECF0F1;
+                    opacity: 0.8;
+                    order: 1;
+                    flex: 3 0 auto;
+                    align-self: center;
+                    legend {
+                            h1 {
+                            display: inline-block;
+                            margin: 0 5px 0 5px;
+                        }
+                        h2 {
+                            display: inline-block;
+                            margin: 0 5px 0 5px;
+                        }
+                    }
+
+                    #lastNamePolymer {
+                        display: inline-block;
+                        margin-left: 15px;
+                    }
+                    #emailPolymer {
+                        display: inline-block;
+                        margin-left: 15px;
+                    }
+                    #subscriptionLevelPolymer {
+                        display: inline-block;
+                        margin-left: 15px;
+                        select {
+                            background-color: rgba(117, 78, 179, 0.5);
+                            color: #B7D30B;
+                            option {
+                                margin-left: 15px;
+                            }
+                        }
+                    }
+                    #phoneNumberPolymer {
+                        display: inline-block;
+                        margin-left: 15px;
+                        input {
+                            margin: 0px;
+                        }
+                    }
+                    #streetAddressPolymer {
+                        display: inline-block;
+                        margin-left: 15px;
+                    }
+                    #streetAddressPolymer_2 {
+                        display: inline-block;
+                        margin-left: 15px;
+                    }
+                    #cityPolymer {
+                        display: inline-block;
+                        margin-left: 15px;
+                    }
+                    #statePolymer {
+                        display: inline-block;
+                        margin-left: 15px;
+                    }
+                    #zipPolymer {
+                        display: inline-block;
+                        margin-left: 15px;
+                    }
+                }
+            }
+
+            paper-fab.paper-fab-1 {
+                background: #03a9f4;
+                color: #ffffff;
+            }
+            // .pure-form legend {
+            //     color: #7B96B8;
+            //     font-size: 110%;
+            //     border-bottom: 2px solid #FF9633;
+            // }
+        }
+
+    }
+.polymer-fieldset__firstNamePolymer {
+    display: inline-block;
+    margin-left: 15px;
+}

@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var sourceMapPath = ('client/main.css.map'),
+    exec = require('child_process').execSync,
+    nodeSass = require('node-sass'),
+    fs = require('fs');
+
+var result = nodeSass.renderSync({
+  file: 'client/scss/main.scss',
+  outFile: 'client/main.css',
+  sourceMap: sourceMapPath
+});
+
+fs.writeFileSync('client/main.css', result.css);
+fs.writeFileSync(sourceMapPath, result.map);
+
+exec('postcss --use autoprefixer -o client/main.css client/main.css', { stdio: 'inherit' });

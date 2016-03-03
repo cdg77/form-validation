@@ -1,0 +1,8 @@
+.idea/
+/node_modules/
+*.log
+.DS_Store
+/client/main.css
+/client/main.css.map
+bundle.js
+/client/bower_components/

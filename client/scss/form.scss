@@ -1,0 +1,207 @@
+.form-contents {
+    background-color: rgba(212, 206, 106, 0.2);
+    // background-color: rgba(183, 211, 11, 0.2);
+}
+
+#mainForm {
+    .vertical-section {
+        box-shadow: 0 2px 2px 0 rgba(117, 175, 150, 0.4), 0 1px 5px 0 rgba(117, 175, 150, 0.4), 0 3px 1px -2px rgba(117, 175, 150, 0.4);
+        background-color: ghostwhite;
+
+    }
+    fieldset {
+        // background-color: #C1A643;
+        legend {
+            h1 {
+                display: inline-block;
+                margin: 0 5px 0 5px;
+            }
+            h2 {
+                display: inline-block;
+                margin: 0 5px 0 5px;
+            }
+        }
+        input {
+            // box-shadow: 2px 2px 3px 2px rgba(0, 255, 236, .7);
+            // box-shadow: 3px 3px red;
+
+        }
+        #firstName {
+
+            display: inline-block;
+            margin-left: 15px;
+
+            &.has-error {
+                .error {
+                    display: block;
+                }
+            }
+
+            &.is-successfull {
+                .success {
+                    display: block;
+                }
+            }
+
+            .success {
+                display: none;
+            }
+
+            .error {
+                display: none;
+            }
+        }
+        #lastName {
+            display: inline-block;
+            margin-left: 15px;
+        }
+        #email {
+            display: inline-block;
+            margin-left: 15px;
+        }
+        #subscriptionLevel {
+            display: inline-block;
+            margin-left: 15px;
+            select {
+                background-color: rgba(117, 78, 179, 0.5);
+                color: #B7D30B;
+                option {
+                    margin-left: 15px;
+                }
+            }
+        }
+        #phoneNumber {
+            display: inline-block;
+            margin-left: 15px;
+            input {
+                margin: 0px;
+            }
+        }
+        #streetAddress {
+            display: inline-block;
+            margin-left: 15px;
+        }
+        #streetAddress_2 {
+            display: inline-block;
+            margin-left: 15px;
+        }
+        #city {
+            display: inline-block;
+            margin-left: 15px;
+        }
+        #state {
+            display: inline-block;
+            margin-left: 15px;
+        }
+        #zip {
+            display: inline-block;
+            margin-left: 15px;
+        }
+    }
+}
+
+
+
+
+
+//
+//
+//
+#phoneNumber {
+    display: inline;
+}
+
+// #solidLogo {
+//     height: 100px;
+//     width: 100px;
+//     float: left;
+// }
+
+.pure-form legend {
+    color: #7B96B8;
+    font-size: 110%;
+    border-bottom: 2px solid #FF9633;
+}
+
+.area{
+  text-align:center;
+  font-size:6.5em;
+  color:#fff;
+  letter-spacing: -7px;
+  font-weight:700;
+  text-transform:uppercase;
+  animation:blur .75s ease-out infinite;
+  text-shadow:0px 0px 5px #fff,
+      0px 0px 7px #fff;
+}
+
+@keyframes blur{
+  from{
+      text-shadow:0px 0px 10px #fff,
+      0px 0px 10px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #7B96B8,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;}
+}
+
+.btn-default.play {
+  background-color: #96FF00;
+  color: #000DF2;
+  font-family: 'Shadows Into Light', cursive;
+  box-shadow: 1px 1px 1px #000,
+               3px 3px 5px white;
+
+}
+
+.btn-default.refresh {
+  background-color: #B22909;
+  color: #FFEB0D;
+  font-family: 'Shadows Into Light', cursive;
+  box-shadow: 1px 1px 1px #000,
+               3px 3px 5px white;
+}
+
+.errorStyle {
+  /*color: #96FF00;
+  font-size: 2em;
+  text-shadow: 1px 1px 1px #000,
+               3px 3px 5px white;*/
+  text-align:center;
+  font-size:2.5em;
+  color:#FD1E0F;
+  letter-spacing: 0px;
+  font-weight:700;
+  text-transform:uppercase;
+  animation:blur .75s ease-out infinite;
+  text-shadow:0px 0px 5px #000,
+      0px 0px 7px white;
+}
+
+.ping {
+    color: #5963FF;
+    font-size: 1em;
+    text-shadow: 1px 1px 1px #000,
+                 3px 3px 5px #96FF00;
+    animation:blur 2s ease-out infinite;
+}
+
+.pong {
+    color: #FF0DFF;
+    font-size: 1em;
+    text-shadow: 1px 1px 1px #000,
+                 3px 3px 5px #96FF00;
+    animation:blur 1s ease-out infinite;
+}

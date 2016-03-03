@@ -1,0 +1,67 @@
+extends ../layout
+
+block scripts
+    script(src="/example-vanilla-javascript/bundle.js") 
+    
+block contents
+    .container.jumbotron
+        #mainForm.pure-form.pure-form-stacked
+
+            fieldset
+                legend
+                    strong= resources.solidCompanyName
+                    = resources.formLegendTitle1
+                    = resources.formLegendTitleJS
+
+                label(for='firstName')= resources.firstNameLabelText
+                input#firstName.pure-input(type='text', required='required', name='firstName', value='', placeholder= resources.firstNamePlaceholderText)
+                #firstNameEmptyError.pong
+
+                label(for='lastName')= resources.lastNameLabelText
+                input#lastName.pure-input(type='text', required, name='lastName', value='', placeholder= resources.lastNamePlaceholderText)
+                #lastNameEmptyError.pong
+
+                label(for='email')= resources.emailLabelText
+                input#email(type='email', required, name='email', value='', placeholder= resources.emailPlaceholderText)
+                #emailEmptyError.pong
+
+                label(for='subscriptionLevel')= resources.subscriptionLevelLabelText
+                select#subscriptionLevel(required)
+                    option(value='')= resources.optionChoose
+                    option(value='silver')= resources.optionSilver
+                    option(value='gold')= resources.optionGold
+                    option(value='platinum')= resources.optionPlatinum
+                    
+                #subscriptionLevelError.pong
+
+                label(for='PhoneNumber')= resources.phoneNumberLabelText
+                |     (
+                input#phoneNumber(type='tel', required, size='3', maxLength='3', value='', placeholder= resources.phoneNumberPlaceholderText1 )
+                | ) 
+                input#phoneNumber(type='tel', required, size='3', maxLength='3', value='', placeholder= resources.phoneNumberPlaceholderText2 )
+                |  - 
+                input#phoneNumber(type='tel', required, size='4', maxLength='4', value='', placeholder= resources.phoneNumberPlaceholderText3 )
+                #phoneNumberError.pong
+
+                legend= resources.streetAddressLegendText
+                label(for='streetAddress')= resources.streetAddressLabelText
+                input#streetAddress(type='text', required, name='streetAddress', value='', placeholder= resources.streetAddressPlaceholderText)
+                #streetAddressError.pong
+
+                label(for='streetAddress_2')
+                input#streetAddress_2(type="text", name="streetAddress_2", value="", placeholder= resources.streetAddressPlaceholderText_2)
+
+                label(for="city")= resources.cityLabelText
+                input#city(type="text", required, name="city", value="", placeholder= resources.cityPlaceholderText)
+                #cityError.pong
+
+                label(for="state")= resources.stateLabelText
+                input#state(type="text", required, name="state", value="", placeholder= resources.statePlaceholderText)
+                #stateError.pong
+
+                label(for="zip")= resources.zipLabelText
+                input#zip(type="text", required, name="zip", value="", placeholder= resources.zipPlaceholderText)
+                #zipError.pong
+
+            button.pure-button.pure-button-primary.submit-button(type="submit")= resources.formSubmitButtonText       
+            

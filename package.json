@@ -1,0 +1,53 @@
+{
+  "name": "intern-form-validation-project",
+  "version": "1.0.0",
+  "description": "Creating a form validation to learn Solid way of badassery",
+  "main": "index.js",
+  "scripts": {
+    "setup": "bin/installDeps",
+    "test": "mocha --recursive test",
+    "start": "bin/start",
+    "lint": "jshint .",
+    "validate": "npm ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.thinksolid.com:greg.larrenaga/intern-form-validation-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^6.1.0",
+    "bluebird": "^3.0.5",
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "node-sass": "^3.4.1",
+    "purecss": "^0.6.0",
+    "watch": "^0.16.0"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.5",
+    "chai": "^3.4.1",
+    "chalk": "^1.1.1",
+    "jquery": "^2.1.4",
+    "precommit-hook": "^3.0.0",
+    "riot": "^2.3.1",
+    "riotify": "^0.1.2"
+  },
+  "pre-commit": [
+    "setup",
+    "lint",
+    "test"
+  ],
+  "browserify": {
+    "transform": [
+      [
+        "riotify",
+        {
+          "template": "jade"
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+extends ../layout
+
+block head
+    script(src="/bower_components/webcomponentsjs/webcomponents.js")
+    //- script(src="/example-polymer/bundle.js")
+    link(rel="import" href="/bower_components/paper-input/paper-input.html")
+    link(rel="import" href="/bower_components/paper-dropdown-menu/paper-dropdown-menu.html")
+    link(rel="import" href="/bower_components/paper-listbox/paper-listbox.html")
+    link(rel="import" href="/bower_components/paper-button/paper-button.html")
+    link(rel="import" href="/bower_components/paper-fab/paper-fab.html")
+
+    
+    link(rel="import" href="/bower_components/iron-input/iron-input.html")
+    link(rel="import" href="/bower_components/iron-selector/iron-selector.html")
+    link(href="path/to/iron-icons/iron-icons.html" rel="import")
+    link(rel="import" href="bower_components/iron-icons/maps-icons.html")
+    
+    link(rel="import" href="/bower_components/gold-email-input/gold-email-input.html")
+    link(rel="import" href="/bower_components/gold-phone-input/gold-phone-input.html")
+    link(rel="import" href="/bower_components/gold-zip-input/gold-zip-input.html")
+    
+    
+block scripts
+    
+
+block contents
+    .polymer-body
+        .container-polymer
+            #polymerMainForm.vertical-section
+            
+                fieldset.polymer-fieldset
+                    legend 
+                        iron-icon(icon="icons:polymer")
+                        h2= resources.formLegendTitlePolymer
+                    #firstNamePolymer
+                        paper-input(is="iron-input", label="First Name", required='true', error-message='* Required * : First Name', auto-validate='')
+                    #lastNamePolymer
+                        paper-input(is="iron-input", label="Last Name", required='true', error-message='* Required * : Last Name', auto-validate='')
+                    #emailPolymer
+                        gold-email-input(required="" auto-validate="" error-message="Please enter a valid email" label="Email contact" )
+                            paper-input-container#container.style-scope.gold-email-input.x-scope.paper-input-container-0
+                                #labelAndInputContainer.label-and-input-container.style-scope.paper-input-container
+                                    label#paper-input-label-771.style-scope.gold-email-input(required="true") Email Contact
+                                    input#input.style-scope.gold-email-input(is="iron-input", required="")
+                                    gold-email-input-error wrong!
+                    
+                    #subscriptionLevelPolymer 
+                        paper-dropdown-menu(is='iron-input', label="Subscription Level", horizontal-align='right', vertical-align='top')
+                            paper-listbox.dropdown-content.horizontal-section
+                                paper-item= resources.optionSilver
+                                br
+                                paper-item= resources.optionGold
+                                br
+                                paper-item= resources.optionPlatinum
+                    
+                    #phoneNumberPolymer
+                        gold-phone-input(required, label= resources.phoneNumberLabelText, country-code="1", phone-number-pattern="XXX-XXX-XXXX", maxlength='12')
+                    .address    
+                        #streetAddressPolymer
+                            paper-input(label="Street Address")
+                        #streetAddressPolymer_2
+                            paper-input(label="Address Line 2")
+                        #cityPolymer
+                            paper-input(label="City")
+                        #statePolymer
+                            paper-input(label="State")
+                        #zipPolymer
+                            gold-zip-input(label="Zip Code", required='true', auto-validate='true', error-message="* Required * : Please enter a valid zip code")
+                        
+                    paper-fab.paper-fab-1(icon='done-all') SUBMIT
+                         
+                    
+                    //- paper-fab.blue(icon="add")
+                     
+                a(type='button', href='index') 
+                    paper-fab(icon='home') 
+
+                                        
+                    
